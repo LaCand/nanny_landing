@@ -34,26 +34,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(-45deg, #ffb6c1, #e6e6fa, #87ceeb, #ffa07a);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
+            background: url('background.png') no-repeat center center fixed;
+            background-size: cover;
+            /* animation: gradientBG 15s ease infinite; - Removed for image background */
             color: var(--text-color);
             padding: 20px;
         }
 
-        @keyframes gradientBG {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-        }
+        /* @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        } */
 
         .glass-card {
             background: var(--glass-bg);
@@ -283,12 +275,12 @@
         <div class="info-box">
             <h3>Why choose me?</h3>
             <ul class="skills-list">
-                <li>Former Au Pair in both France and Sweden.</li>
-                <li>Former nanny for 4 years</li>
-                <li>Certified in First Aid & CPR</li>
-                <li>I can come in short time if you need urgent child care</li>
+                <li>I was an Au Pair in France and in Sweden</li>
+                <li>Former babysitter for 4 years</li>
+                <li>Experience with children from 6 months to 7 years old</li>
+                <li>Flexible hours, including evenings and weekends</li>
                 <li>Fluent in English, Spanish, Portuguese and Swedish</li>
-                <li>Creative play and educational activities</li>
+                <li>Flexible rates</li>
             </ul>
         </div>
 
