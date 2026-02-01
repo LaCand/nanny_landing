@@ -1,24 +1,19 @@
 # Nanny Service Landing Page
 
-A modern, glassmorphism-style landing page for a Nanny service.
+A modern, glassmorphism-style landing page for a Nanny service, designed for Laura M. C.
 
 ## Features
-- **Design**: Single-page fluid design with animated pastel gradient background and frosted glass effect.
-- **Responsive**: Optimizes layout for both mobile and desktop.
-- **Contact**: Integrated "Call or Text" button and Formspree contact form.
 
-## Deployment on GitHub Pages
+-   **Design**: 
+    -   Single-page fluid design with a custom pink-bordered background.
+    -   Frosted glass effect card centered on the screen.
+    -   Responsive layout optimized for both mobile and desktop.
 
-1.  **Repository Settings**: Go to the **Settings** tab of this repository.
-2.  **Pages**: In the left sidebar, click on **Pages**.
-3.  **Source**: Under "Build and deployment", select **Deploy from a branch**.
-4.  **Branch**: Select `main` (or your default branch) and the `/ (root)` folder.
-5.  **Save**: Click **Save**.
+-   **Content**:
+    -   **Profile**: Custom profile image (zoomed and centered) with a signature-style name placement.
+    -   **Bio**: Personalized introduction and skills list (Au Pair experience, Babysitter experience, Certifications).
+    -   **Styling**: "Parfait Pink" (#dcb3bf) accents on form borders and divider lines.
 
-Your site will be live at `https://[your-username].github.io/[repository-name]/` shortly!
-
-## Customization
-
--   **Name & Text**: Edit `index.html` to replace `[Nanny Name Here]` and the placeholder text.
--   **Photo**: Replace the placeholder `div` with an `img` tag pointing to your photo.
--   **Form**: The form is currently connected to a demo Formspree ID. **Update the `action` URL in the `<form>` tag with your own Formspree endpoint.**
+-   **Functionality**:
+    -   **Call to Action**: "Call or Text Me" button styled to match the theme.
+    -   **Contact Form**: Integrated Formspree contact form with name, phone, email, and message fields.
