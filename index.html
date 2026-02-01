@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanny Services</title>
+    <!-- Google Fonts: Quicksand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.25);
+            --glass-border: rgba(255, 255, 255, 0.4);
+            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+            --text-color: #2d3748;
+            --primary-btn: #ffffff;
+            --primary-btn-text: #4a5568;
+            --accent-color: #6b46c1;
+            /* Soft purple for text accents */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(-45deg, #ffb6c1, #e6e6fa, #87ceeb, #ffa07a);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: var(--text-color);
+            padding: 20px;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            box-shadow: var(--glass-shadow);
+            max-width: 500px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Profile Image */
+        .profile-img-container {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            background-color: #ddd;
+            /* Placeholder background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-img-placeholder {
+            font-size: 40px;
+            color: #888;
+        }
+
+        .profile-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            /* Hides if src is broken/empty but good to have ready */
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+
+        .intro {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #4a5568;
+        }
+
+        /* White Info Box */
+        .info-box {
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .info-box h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+            text-align: center;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .skills-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .skills-list li::before {
+            content: "♥";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-size: 1rem;
+        }
+
+        /* Call To Action */
+        .cta-btn {
+            display: inline-block;
+            background: white;
+            color: var(--primary-btn-text);
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            margin-bottom: 25px;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 25px;
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .divider:not(:empty)::before {
+            margin-right: .5em;
+        }
+
+        .divider:not(:empty)::after {
+            margin-left: .5em;
+        }
+
+        /* Form Styling */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 0.95rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            background: rgba(255, 255, 255, 0.8);
+            border-color: #fff;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .submit-btn {
+            background: var(--accent-color);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .submit-btn:hover {
+            background: #553c9a;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 480px) {
+            .glass-card {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="glass-card">
+        <!-- Photo Placeholder -->
+        <div class="profile-img-container">
+            <!-- <img src="path/to/image.jpg" alt="Nanny Photo"> -->
+            <div class="profile-img-placeholder">📷</div>
+        </div>
+
+        <h1>Laura M.C</h1>
+
+        <p class="intro">
+            Dear Parents,<br><br>
+            We all know that raising little ones is a full-time job. Sometimes you need a romantic dinner, an extra pair
+            of hands during an emergency, or simply a quiet hour to take a nap and recharge.<br><br>
+            I am here to give you that peace of mind.
+        </p>
+
+        <!-- White Skills Box -->
+        <div class="info-box">
+            <h3>Why choose me?</h3>
+            <ul class="skills-list">
+                <li>Former Au Pair in both France and Sweden.</li>
+                <li>Former nanny for 4 years</li>
+                <li>Certified in First Aid & CPR</li>
+                <li>I can come in short time if you need urgent child care</li>
+                <li>Fluent in English, Spanish, Portuguese and Swedish</li>
+                <li>Creative play and educational activities</li>
+            </ul>
+        </div>
+
+        <!-- Direct Call CTA -->
+        <a href="tel:+1234567890" class="cta-btn">📞 Call or Text Me</a>
+
+        <div class="divider">Or let me contact you</div>
+
+        <!-- Contact Form -->
+        <form action="https://formspree.io/f/xpqdnjnd" method="POST" class="contact-form">
+
+            <div class="form-group">
+                <input type="text" name="name" class="form-input" placeholder="Your Name" required>
+            </div>
+
+            <div class="form-group">
+                <input type="tel" name="telephone" class="form-input" placeholder="Phone Number (Optional)">
+            </div>
+
+            <div class="form-group">
+                <input type="email" name="email" class="form-input" placeholder="Email Address" required>
+            </div>
+
+            <div class="form-group">
+                <textarea name="message" class="form-textarea"
+                    placeholder="Tell me what you need or the best time to contact you..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
