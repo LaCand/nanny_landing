@@ -67,7 +67,7 @@
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            border: 4px solid white;
+            /* border: 4px solid white; - Removed border */
             margin: 0 auto 20px;
             overflow: hidden;
             background-color: #ddd;
@@ -87,172 +87,178 @@
             height: 100%;
             object-fit: cover;
             display: block;
-            transform: scale(1.15);
-            transform-origin: center;
-        }
 
-        h1 {
-            font-weight: 700;
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            color: #2d3748;
-        }
-
-        .intro {
-            font-size: 1.05rem;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            color: #4a5568;
-        }
-
-        /* White Info Box */
-        .info-box {
-            background: rgba(255, 255, 255, 0.7);
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 30px;
-            text-align: left;
-        }
-
-        .info-box h3 {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            color: var(--accent-color);
-            text-align: center;
-        }
-
-        .skills-list {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .skills-list li {
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 10px;
-            font-size: 0.95rem;
-        }
-
-        .skills-list li::before {
-            content: "♥";
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-            font-size: 1rem;
-        }
-
-        /* Call To Action */
-        .cta-btn {
-            display: inline-block;
-            background: var(--accent-color);
-            color: white;
-            padding: 12px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            margin-bottom: 25px;
-            width: 100%;
-            border: none;
-            cursor: pointer;
-            text-align: center;
-        }
-
-        .cta-btn:hover {
-            background: #553c9a;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .divider {
-            display: flex;
-            align-items: center;
-            text-align: center;
-            margin-bottom: 25px;
-            color: #718096;
-            font-size: 0.9rem;
-        }
-
-        .divider::before,
-        .divider::after {
-            content: '';
-            flex: 1;
-            border-bottom: 2px solid #dcb3bf;
-        }
-
-        .divider:not(:empty)::before {
-            margin-right: .5em;
-        }
-
-        .divider:not(:empty)::after {
-            margin-left: .5em;
-        }
-
-        /* Form Styling */
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .form-group {
-            position: relative;
-        }
-
-        .form-input,
-        .form-textarea {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #dcb3bf;
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 10px;
-            font-family: 'Quicksand', sans-serif;
-            font-size: 0.95rem;
-            outline: none;
-            transition: all 0.3s ease;
-        }
-
-        .form-input:focus,
-        .form-textarea:focus {
-            background: rgba(255, 255, 255, 0.8);
-            border-color: #fff;
-            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
-        }
-
-        .form-textarea {
-            resize: vertical;
-            min-height: 80px;
-        }
-
-        .submit-btn {
-            background: var(--accent-color);
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s ease;
-            font-family: 'Quicksand', sans-serif;
-        }
-
-        .submit-btn:hover {
-            background: #553c9a;
-        }
-
-        /* Mobile Adjustments */
-        @media (max-width: 480px) {
-            .glass-card {
-                padding: 30px 20px;
+            .profile-img-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                transform: scale(1.5);
+                transform-origin: center;
             }
 
             h1 {
-                font-size: 1.5rem;
+                font-weight: 700;
+                font-size: 1.8rem;
+                margin-bottom: 10px;
+                color: #2d3748;
             }
-        }
+
+            .intro {
+                font-size: 1.05rem;
+                line-height: 1.6;
+                margin-bottom: 30px;
+                color: #4a5568;
+            }
+
+            /* White Info Box */
+            .info-box {
+                background: rgba(255, 255, 255, 0.7);
+                border-radius: 12px;
+                padding: 25px;
+                margin-bottom: 30px;
+                text-align: left;
+            }
+
+            .info-box h3 {
+                font-size: 1.2rem;
+                margin-bottom: 15px;
+                color: var(--accent-color);
+                text-align: center;
+            }
+
+            .skills-list {
+                list-style: none;
+                padding-left: 0;
+            }
+
+            .skills-list li {
+                position: relative;
+                padding-left: 25px;
+                margin-bottom: 10px;
+                font-size: 0.95rem;
+            }
+
+            .skills-list li::before {
+                content: "♥";
+                position: absolute;
+                left: 0;
+                color: var(--accent-color);
+                font-size: 1rem;
+            }
+
+            /* Call To Action */
+            .cta-btn {
+                display: inline-block;
+                background: var(--accent-color);
+                color: white;
+                padding: 12px;
+                border-radius: 10px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 1rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+                margin-bottom: 25px;
+                width: 100%;
+                border: none;
+                cursor: pointer;
+                text-align: center;
+            }
+
+            .cta-btn:hover {
+                background: #553c9a;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            }
+
+            .divider {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 25px;
+                color: #718096;
+                font-size: 0.9rem;
+            }
+
+            .divider::before,
+            .divider::after {
+                content: '';
+                flex: 1;
+                border-bottom: 2px solid #dcb3bf;
+            }
+
+            .divider:not(:empty)::before {
+                margin-right: .5em;
+            }
+
+            .divider:not(:empty)::after {
+                margin-left: .5em;
+            }
+
+            /* Form Styling */
+            .contact-form {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .form-group {
+                position: relative;
+            }
+
+            .form-input,
+            .form-textarea {
+                width: 100%;
+                padding: 12px 15px;
+                border: 2px solid #dcb3bf;
+                background: rgba(255, 255, 255, 0.5);
+                border-radius: 10px;
+                font-family: 'Quicksand', sans-serif;
+                font-size: 0.95rem;
+                outline: none;
+                transition: all 0.3s ease;
+            }
+
+            .form-input:focus,
+            .form-textarea:focus {
+                background: rgba(255, 255, 255, 0.8);
+                border-color: #fff;
+                box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+            }
+
+            .form-textarea {
+                resize: vertical;
+                min-height: 80px;
+            }
+
+            .submit-btn {
+                background: var(--accent-color);
+                color: white;
+                padding: 12px;
+                border: none;
+                border-radius: 10px;
+                font-size: 1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: background 0.3s ease;
+                font-family: 'Quicksand', sans-serif;
+            }
+
+            .submit-btn:hover {
+                background: #553c9a;
+            }
+
+            /* Mobile Adjustments */
+            @media (max-width: 480px) {
+                .glass-card {
+                    padding: 30px 20px;
+                }
+
+                h1 {
+                    font-size: 1.5rem;
+                }
+            }
     </style>
 </head>
 
@@ -265,7 +271,8 @@
             <!-- <div class="profile-img-placeholder">📷</div> -->
         </div>
 
-        <h1>Laura M.C</h1>
+
+        <!-- <h1>Laura M. C.</h1> - Removed Name Header -->
 
         <p class="intro">
             Dear Parents,<br><br>
@@ -278,7 +285,7 @@
         <div class="info-box">
             <h3>Why choose me?</h3>
             <ul class="skills-list">
-                <li>I was an Au Pair in France and in Sweden</li>
+                <li>Au Pair in France and in Sweden</li>
                 <li>Former babysitter for 4 years</li>
                 <li>Experience with children from 6 months to 7 years old</li>
                 <li>Flexible hours, including evenings and weekends</li>
