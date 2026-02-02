@@ -1,6 +1,6 @@
 # Nanny Service Landing Page
 
-A modern, glassmorphism-style landing page for a Nanny service, designed for Laura M. C.
+A modern landing page for a Nanny service.
 
 ## Features
 
@@ -10,7 +10,7 @@ A modern, glassmorphism-style landing page for a Nanny service, designed for Lau
     -   Responsive layout optimized for both mobile and desktop.
 
 -   **Content**:
-    -   **Profile**: Custom profile image (zoomed and centered) with a signature-style name placement.
+    -   **Profile**: Custom profile image.
     -   **Bio**: Personalized introduction and skills list (Au Pair experience, Babysitter experience, Certifications).
     -   **Styling**: "Parfait Pink" (#dcb3bf) accents on form borders and divider lines.
 
